@@ -12,8 +12,21 @@ body {
 }
 
 .container {
-  display: flex;
-  background-color: lightblue;
+  /*display: inline-flex; Se ajusta en el ancho de los bordes*/
+  display: flex; /* Se ajusta al espacio disponible - Es el más común de usar*/
+
+  flex-direction: row; /* Valor por Default */
+  /*flex-direction: row-reverse; Derecha a izquierda */
+  /*flex-direction: column; Abajo hacia arriba */
+  /*flex-direction: column-reverse; Arriba a abajo */
+  background-color: lightblue; 
+  justify-content: start; /* Alinea a la izquierda */
+  justify-content: end; /* Alinea a la derecha */
+  justify-content: center; /* Alinea al centro */
+  justify-content: space-around; /* Asigna espacio alrededor de cada elemento */
+  justify-content: space-between; /* Asigna espacio entre cada elemento */
+  justify-content: space-evenly; /* Asigna espacio entre los elementos y el contenedor */
+
 }
 
 .item {
@@ -24,5 +37,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   padding-top: 32px;
+  border: 1px solid black;
 }
+
 
