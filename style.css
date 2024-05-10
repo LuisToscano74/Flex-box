@@ -12,33 +12,52 @@ body {
 }
 
 .container {
-   display: flex; /* Esto habilita las propiedades de Flex- */
-   flex-direction: row; /* Este es el valor por default */
-   flex-direction: column; /* Cambia de dirección del eje */
+   display: flex; /* Esto habilita las propiedades de Flexbox*/
    background-color: lightblue; 
 }
 
-/* Propiedades de Flex-Box
+/* Propiedades de Flexbox para los Items
 
-   + flex-basis -> Tamaño del main-size del elemento. Es "como un width/height" ancho base del elemento.
+  + Flex-grow -> Esta propiedad ajuste el factor de crecimiento de los elementos, en función del espacio disponible. El valor por default es 'auto'.
+  
+  Esta propiedad recibe valores númericos: 1, 2 ,3 ,4...El número que coloquemos es el factor de crecimiento.
 
-   Cuando flex-direction: row / row reverse -> flex-basis = ancho
-   Cuando flex-direction: column / column  ->  flex-basis = alto 
-   
-   Flex-Basis es relativa al espacio disponible del contenedor. Si no hay espacio suficiente los elementos no crecerán más alla.
-   
-   Si tengo flex-basis declarado el width/height no funciona, de acuerdo al contexto de dirección del eje principal. */
+  */
 
 .item {
-  flex-basis: 100px;
-  width: 200px;
-  height: 500px;
+  flex-grow: auto; /*Este es su valor por default */
+  flex-grow: 1; /* Va hacer que todos los items crezcan con el mismo factor. */
   background-color: lightcoral;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   border: 1px solid black;
 }
+
+.puchunguito {
+  flex-grow: -2; /* El item con esta clase, crece con un factor de 2. */
+  background-color: green;
+  color: white;
+}
+
+.michi {
+  flex-grow: -1;
+  background-color: pink;
+}
+
+.perrito {
+  flex-grow: 2;
+  background-color: darkred;
+  color: white;
+}
+
+.fish {
+  flex-grow: -1;
+  background-color: purple;
+  color: white;
+}
+
+
 
 
 
