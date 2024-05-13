@@ -12,51 +12,47 @@ body {
 }
 
 .container {
-   display: flex; /* Esto habilita las propiedades de Flexbox*/
+   display: flex; 
    background-color: lightblue; 
 }
 
-/* Propiedades de Flexbox para los Items
+/* Flex-Shrink -> Esta propiedad funciona un factor de contradicción, encojimiento, reducción de los elementos de un contenedor item. */
 
-  + Flex-grow -> Esta propiedad ajuste el factor de crecimiento de los elementos, en función del espacio disponible. El valor por default es 'auto'.
-  
-  Esta propiedad recibe valores númericos: 1, 2 ,3 ,4...El número que coloquemos es el factor de crecimiento.
-
-  */
-
+/* Flex-shrink: 1; Este es el valor por Default */
 .item {
-  flex-grow: auto; /*Este es su valor por default */
-  flex-grow: 1; /* Va hacer que todos los items crezcan con el mismo factor. */
   background-color: lightcoral;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   border: 1px solid black;
+  flex-basis: 200px;
+  flex-grow: 1;
 }
 
-.puchunguito {
-  flex-grow: -2; /* El item con esta clase, crece con un factor de 2. */
-  background-color: green;
-  color: white;
+.apachurro-1 {
+  flex-grow: 5;
+  flex-shrink: 0;
+  background-color:aqua;
 }
 
-.michi {
-  flex-grow: -1;
-  background-color: pink;
-}
-
-.perrito {
-  flex-grow: 2;
-  background-color: darkred;
-  color: white;
-}
-
-.fish {
-  flex-grow: -1;
+.apachurro-2 {
+  flex-grow: 4;
+  flex-shrink: 2;
   background-color: purple;
   color: white;
 }
 
+.apachurro-3 {
+  flex-grow: 2;
+  flex-shrink: 3;
+  background-color: lightgreen;
+}
+
+.apachurro-4 {
+  flex-grow: 0;
+   flex-shrink: 10;
+   background-color:lightseagreen;
+}
 
 
 
