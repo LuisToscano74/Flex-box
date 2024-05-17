@@ -7,52 +7,43 @@
 }
 
 body {
-  background-color:antiquewhite;
-  font-family:sans-serif;
+  background-color: antiquewhite;
+  font-family: sans-serif;
 }
 
 .container {
-   display: flex; 
+   width: 500px;
+   display: flex;
+   flex-wrap: wrap;
+  /* gap: 24px; Espacio entre los elementos */
+  /* gap: 4rem; Unidades absolutas: px o relativas; em o rem */
+  column-gap: 24px; /* Espacio entre los elementos en la vertical */
+  row-gap: 32px; /* Espacio entre los elementos en la horizontal */
+  gap: 10px 32px; /* Con los valores, el primero es para espacio horizontal y el segundo con el espacio vertical */
    background-color: lightblue; 
 }
 
-/* Flex-Shrink -> Esta propiedad funciona un factor de contradicción, encojimiento, reducción de los elementos de un contenedor item. */
+/* Gap -> Espacio entre los elementos 
+   
+ Recibe valores con números con unidades relativas o absolutas. 
+   
+ Esta propiedad se pasa al contenedor 
+   
+*/
 
-/* Flex-shrink: 1; Este es el valor por Default */
 .item {
+  width: 100px; 
+  height: 100px; 
+
   background-color: lightcoral;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   border: 1px solid black;
-  flex-basis: 200px;
-  flex-grow: 1;
 }
 
-.apachurro-1 {
-  flex-grow: 5;
-  flex-shrink: 0;
-  background-color:aqua;
-}
 
-.apachurro-2 {
-  flex-grow: 4;
-  flex-shrink: 2;
-  background-color: purple;
-  color: white;
-}
 
-.apachurro-3 {
-  flex-grow: 2;
-  flex-shrink: 3;
-  background-color: lightgreen;
-}
-
-.apachurro-4 {
-  flex-grow: 0;
-   flex-shrink: 10;
-   background-color:lightseagreen;
-}
 
 
 
